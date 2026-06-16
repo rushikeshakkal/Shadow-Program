@@ -110,3 +110,49 @@ section .logo {
   transition-delay: 0.3s;
 }
 
+#companies p{
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#industries{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+#industries-name{
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+  transition: 0.3s ease-in-out;
+  margin-bottom: 80px;
+  
+}
+#industries-name:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(33, 37, 234, 0.668);
+}
+
+
+
+#industries-name img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.Others{
+  display: flex;
+  align-items:center;
+  margin-left:20rem;
+  position: relative;
+  bottom:100px;
+  
+}
+
+.Others #industries-name{
+  margin-right: 80px;
+}
+
+
