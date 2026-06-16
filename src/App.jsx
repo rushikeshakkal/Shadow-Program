@@ -12,13 +12,12 @@ function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible')
-            // Once visible, stop observing (animation plays once)
             observer.unobserve(entry.target)
           }
         })
       },
       {
-        threshold: 0.15, // trigger when 15% of element is visible
+        threshold: 0.15, 
       }
     )
 
@@ -110,9 +109,53 @@ function App() {
       </section>
 
       <section id='companies' className='w-full min-h-screen bg-gray-950 text-white'>
-        
+          <h2 className='text-4xl font-bold text-center pt-30 text-yellow-300'>Explore the Companies Behind Innovation</h2>
+          <p className='text-center pt-8'>Discover leading organizations across technology, manufacturing, finance, and consulting through immersive industry visits and real-world exposure.</p>
+
+          <div id='industries' className='flex flex-wrap min-h-screen px-18 pt-30'>
+            <div id='industries-name' className='w-100 h-85 bg-gray-600'>
+              <div><img src="https://marathiimages.timesnownews.com/thumb/msid-118247647,width-1280,height-720,resizemode-75/118247647.jpg" alt="" /></div>
+              <div>
+                <h2 className='text-2xl pt-5 font-bold pl-8'> <a className='text-cyan-300'>G</a><a className='text-red-500'>o</a><a className='text-yellow-300'>o</a><a className='text-cyan-300'>g</a><a className='text-green-500'>l</a><a className='text-red-500'>e</a></h2>
+                <p className='pl-5 pt-2'><a className='text-red-300'>Venue</a>: Google Office , BKC , Mumbai</p>
+              </div>
+            </div>
+            <div id='industries-name' className='w-100 h-85 bg-gray-600'>
+              <div><img src="https://www.corning.com/microsites/hr/careers/images/1184_1184_pune_plant.jpg.transform/mobile-360/img.jpg" className='w-100 h-55 bg-cover' /></div>
+              <div>
+                <h2 className='text-2xl pt-5 font-bold pl-8 text-cyan-300'>CORNING</h2>
+                <p className='pl-5 pt-2'><a className='text-red-300'>Venue</a>: Varale ,Pune Maharashtra</p>
+              </div>
+            </div>
+            <div id='industries-name' className='w-100 h-85 bg-gray-600'>
+              <div><img src="https://i0.wp.com/opportunitycell.com/wp-content/uploads/2022/09/04-04-2019-1113.jpg?fit=668%2C446&ssl=1" className='w-100 h-55' /></div>
+              <div>
+                <h2 className='text-2xl pt-5 font-bold pl-8 text-green-500'>Deloitte</h2>
+                <p className='pl-5 pt-2'><a className='text-red-300'>Venue</a>: Lower Parel, Mumbai</p>
+              </div>
+            </div>
+            
+          </div>
+
+          <div className='Others'>
+            <div id='industries-name' className='w-100 h-85 bg-gray-600'>
+              <div><img src="https://i0.wp.com/opportunitycell.com/wp-content/uploads/2023/03/Screenshot-2023-03-28-at-10.17.15-PM.png?fit=1568%2C1244&ssl=1" className='w-100 h-55' /></div>
+              <div>
+                <h2 className='text-2xl pt-5 font-bold pl-8 text-green-500'>TCS</h2>
+                <p className='pl-5 pt-2'><a className='text-red-300'>Venue</a>: TCS House, Mumbai</p>
+              </div>
+            </div>
+            <div id='industries-name' className='w-100 h-85 bg-gray-600'>
+              <div><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/IT7A2275_copy_%28cropped%29.jpg" className='w-100 h-55' /></div>
+              <div>
+                <h2 className='text-2xl pt-5 font-bold pl-8 text-green-500'>NSE</h2>
+                <p className='pl-5 pt-1'><a className='text-red-300'>Venue</a>: Bandra Kurla Complex (BKC), Mumbai</p>
+              </div>
+            </div>
+          </div>
+            
       </section>
-    
+
 
 
     </>
