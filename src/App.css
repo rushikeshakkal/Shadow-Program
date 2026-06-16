@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+section .logo {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: linear-gradient(to right, rgb(17, 236, 236), rgb(206, 216, 19));
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-links li a {
+  font-weight: 700;
+  padding: 5px 10px;
+  transition: 0.2s ease;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.nav-links li a:hover{
+  color:rgb(34, 195, 227);
+}
+
+.nav-links  .active{
+    background-color: rgba(239, 231, 216, 0.359);
+}
+
+
+.Hero {
+  background-image: url("https://images.openai.com/static-rsc-4/TGX2h8sqdxecrNFT0B15ufRGl91y5fPx7i_rMA5Z3GdayHbGeLVr6bCYFu8ZpDWSCI5pvFVJoHyfccruz8Ynf2Tjysw56Hyg7hH3YqNeTxeFDrLqNNMPG5DQsQARghY9MoNu2dN9vjTrtNjvtovTortQB6Z4iIX1mRwo7oeGIBBaXlScl5xc3JSJAJ_DLlis?purpose=inline");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  animation:expand 10s linear infinite alternate;
+}
+
+@keyframes expand{
+  from{
+    transform: scaleY(1.0);
+  }
+  to{
+    transform: scaleY(1.1);
+  }
+}
+
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Hero h1 {
+  font-weight: 900;
+  font-size: 50px;
+  animation: fadeup 1.2s ease-in-out both;
+}
+
+.Hero p {
+  color: rgb(255, 242, 0);
+  font-weight: 700;
+  animation: fadeup 1.4s ease-in-out both;
+  font-size: large;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+
+.animate-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+
+.animate-left.visible,
+.animate-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+.animate-left:nth-child(2),
+.animate-right:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.animate-left:nth-child(3),
+.animate-right:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
